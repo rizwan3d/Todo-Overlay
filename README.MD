@@ -1,4 +1,4 @@
-# Live Stream Markdown Renderer
+# Todo-Overlay
 
 A lightweight project that reads a Markdown file (`input.txt`), renders it as styled HTML with support for `[ ]` and `[X]` checkboxes, and provides a visually appealing UI optimized for live streaming. This is ideal for showcasing task lists, announcements, or live updates during your stream.
 
