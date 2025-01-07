@@ -1,3 +1,0 @@
-- [ ] Learn JavaScript
-- [X] Learn HTML and CSS
-- [ ] Build a Markdown Renderer

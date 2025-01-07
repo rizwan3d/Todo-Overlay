@@ -1,0 +1,25 @@
+{
+  "name": "todo-overlay",
+  "version": "1.0.0",
+  "description": "This project provides a live stream overlay solution that integrates a to-do list for streamers. It allows streamers to manage tasks directly on their live stream, giving them the ability to display their to-do list dynamically during their stream. The overlay is designed to be compatible with OBS Studio via the Browser Source feature, making it easy to use for live streamers across various platforms.",
+  "main": "app.ts",
+  "scripts": {
+    "build": "tsc && npm run minify-js && npm run minify-html && npm run minify-css",
+    "minify-html": "html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true --output overlay/index.html src/index.html",
+    "minify-css": "npx cssnano-cli src/style.css > overlay/style.css",
+    "minify-js": "terser overlay/app.js --compress --mangle --output overlay/app.js"
+  },
+  "keywords": [
+    "Live Stream"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "cssnano-cli": "^1.0.5",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.49",
+    "terser": "^5.37.0",
+    "typescript": "^5.7.2"
+  }
+}

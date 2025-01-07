@@ -1,0 +1,38 @@
+# Node.js dependencies
+node_modules/
+
+# TypeScript output
+/dist/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# npm package-lock files (optional, if you don't want to track the lock file)
+package-lock.json
+
+# Coverage reports
+coverage/
+
+# Build directory
+/build/
+
+# Terser or minified JS files (optional)
+*.min.js
+
+# Other files
+*.bak
+*.swp
+
+
+/overlay/

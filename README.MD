@@ -1,99 +1,54 @@
-# Live Stream Markdown Renderer
+# Todo List Overlayer For Live Streamers (OBS ready)
 
-A lightweight project that reads a Markdown file (`input.txt`), renders it as styled HTML with support for `[ ]` and `[X]` checkboxes, and provides a visually appealing UI optimized for live streaming. This is ideal for showcasing task lists, announcements, or live updates during your stream.
-
-## Features
-
-- **Markdown Support**: Parses standard Markdown with checkbox support.
-- **Live Stream Ready**: Designed with a clean, modern UI suitable for overlays.
-- **Dynamic Content**: Automatically fetches and displays the content of `input.txt`.
-- **Responsive Design**: Looks great on all screen sizes and resolutions.
+This project provides a live stream overlay solution that integrates a to-do list for streamers. It allows streamers to manage tasks directly on their live stream, giving them the ability to display their to-do list dynamically during their stream. The overlay is designed to be compatible with OBS Studio via the Browser Source feature, making it easy to use for live streamers across various platforms.
 
 ## Developed By
 
 Made with ❤️ by [2Thoughts - YouTube](https://www.youtube.com/@2Thoughts) for [Rehani - YouTube](https://www.youtube.com/@Rehani).
 
----
+## Preview
+![Preview](https://github.com/rizwan3d/Todo-Overlay/blob/main/imgs/preview.png?raw=true)
 
-## Installation
+## Key Features
 
-1. Clone or download this repository:
-   ```bash
-   git clone https://github.com/rizwan3d/Todo-Overlay
-   cd Todo-Overlay
-   ```
+- **Live Stream Overlay**: The overlay is designed to be used in **OBS Studio** as a browser source, allowing seamless integration into live streams.
+- **Interactive To-Do List**: Streamers can add, edit, check off, and delete tasks directly from the overlay, making it easy to keep track of live stream goals, reminders, or other tasks.
+- **Real-Time Updates**: The to-do list can be updated in real-time, providing a dynamic experience for both the streamer and the viewers.
+- **Local Storage**: The to-do list items are stored in the browser's local storage, ensuring that tasks persist across page reloads.
+- **Customizable Design**: The overlay's design can be customized with CSS to match the streamer's branding and aesthetic.
 
-2. Place your `input.txt` file in the project directory. Example content:
-   ```markdown
-   # Live Stream Tasks
+## Download
+If you prefer not to build the project locally, you can download the latest release from the GitHub Releases page.
+* Go to the [Releases page](https://github.com/rizwan3d/Todo-Overlay/releases).
+* Download the latest release zip file.
+* Extract the files to a folder on your computer.
 
-   - [ ] Announce the giveaway
-   - [X] Start the live stream
-   - [ ] Answer audience questions
-   - [ ] Share discount codes
-   ```
-
----
-
-## Adding to OBS Studio
-
-To display the Markdown Renderer in your live stream using OBS Studio:
-
-### 1. Enable Local File Loading
-1. Open OBS Studio.
-2. Click the **+** button in the **Sources** panel and select **Browser**.
-3. Name the source (e.g., `Local Task List`) and click **OK**.
-
-### 2. Configure the Browser Source
-1. Check the **Local File** checkbox.
-2. Click **Browse** and navigate to the `index.html` file in the project directory.
-3. Set the **Width** and **Height** to match your stream resolution (e.g., 800x600).
-5. Click **OK** to add the source.
-
-### 3. Position and Resize
-Drag and resize the browser source in your OBS scene to fit your desired layout.
+Once extracted, follow the OBS Setup steps above, but use the extracted index.html file in the file path.
 
 ---
 
-## Customization
-
-- **Styling**: Modify `style.css` to change colors, fonts, and layout.
-- **Content**: Update `input.txt` to dynamically change the displayed content.
-- **Checkbox Colors**: Customize the colors of the checkboxes in `style.css` under:
-  ```css
-  input[type="checkbox"] {
-    accent-color: #ffcc00; /* Change this for unchecked */
-  }
-  input[type="checkbox"]:checked {
-    accent-color: #00cc66; /* Change this for checked */
-  }
-  ```
-
+## Set Up in OBS Studio
+To add the overlay to your live stream using OBS Studio:
+* Open OBS Studio.
+* Add a Browser Source:
+  * Click the "+" button in the Sources box.
+  * Select Browser and give it a name (e.g., "To-Do Overlay").
+  * In the URL field, use the local file path to your HTML file.
+  * Set the Width and Height to fit your stream layout (e.g., 1920x1080 for full HD).
 ---
 
-## Example Use Case
+## How It Works
+> In OBS Studio open interact mode by right-click the Browser Source and click to interact. This will allow you to interact with the to-do list directly in OBS.
 
-### Input File (`input.txt`):
-```markdown
-# Stream Schedule
+### Double Click to Delete
+* To delete a task, simply double-click on the task text. This will remove the task from the list and update the local storage.
 
-- [X] Start the stream
-- [ ] Play the first game
-- [ ] Announce the winner
-- [ ] End the stream
-```
+### Move Mouse Lower to Add New Task
+* When you move the mouse to the bottom of the task list, a new task input field will automatically appear, allowing you to add a new task to the list.
 
-### OBS Output:
-A professional, live-updating task list displayed directly on your stream overlay.
+### Hover to See Move Up/Down Buttons
+* When you hover over any task, Move Up and Move Down buttons will appear. You can use these buttons to reorder tasks by clicking them.
 
+### Click on ✓ and - to Change Item Status
+* You can click on the ✓ or - icon next to a task to toggle its completion status. When a task is completed, the icon will change to ✓; when it is incomplete, it will show -.
 ---
-
-## License
-
-This project is licensed under the MIT License. Feel free to use and modify it as needed for your streams!
-
----
-
-## Contribution
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
