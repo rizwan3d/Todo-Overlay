@@ -7,14 +7,15 @@ body {
     font-size: 13px;
 }
 
+input {
+    border: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .h {
     font-weight: bold;
     font-size: 20px;
-}
-
-.container {
-    max-width: 300px;
-    margin: auto;
 }
 
 .todo-item {
@@ -28,17 +29,11 @@ body {
     color: #007bff;
 }
 
-input {
-    border: 0;
-    color: white;
-    background-color: rgba(0, 0, 0, 0);
-}
-
 .move-btn {
     display: none;
     margin-left: 5px;
-  }
-  
-  .task-container:hover .move-btn {
+}
+
+.task-container:hover .move-btn {
     display: inline-block;
-  }
+}
